@@ -21,8 +21,8 @@ for (var i = -99; i < 100; i++)
 }
 
 var easyOpSet = ["+","-"];
-var medOpSet = ["X", "+", "-", "/"];
-var hardOpSet = ["X", "+", "-"];
+var medOpSet = ["x", "+", "-", "/"];
+var hardOpSet = ["x", "+", "-"];
 
 var problem1;
 var problem2;
