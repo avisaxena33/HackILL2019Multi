@@ -20,14 +20,14 @@ var point = 0;   //points accumulated by player starts at 0
 var hard = 8;     //hard problem value
 var medium = 5;    //medium problem value
 var easy = 3;      //easy problem value
-var speed = 0.3;   //base speed, 0.1 increase per tenth of a second
-var speed_multiplier = 2; //speed increase multiplier
-var damage_multiplier = 2; //damage modifier
+var speed = 0.15;   //base speed, 0.1 increase per tenth of a second
+var speed_multiplier = 1.5; //speed increase multiplier
+var damage_multiplier = 2.5; //damage modifier
 var damage_tick = 1;       //base damage at beginning of the game
 var zone_freq = 20;        //speed up / damage increase frequency in seconds and runtime
 var zone = 1;              // zone number
 var boost = 1;
-var boostModifier = .5;
+var boostModifier = .25;
 var connections;
 //countdown();
 
@@ -118,7 +118,7 @@ function checker()
         if (ans1 == pSet[1])
         {
             right = true;
-            if(boost != 3)
+            if(boost != 2)
             {
                 boost += boostModifier;
             }
@@ -157,7 +157,7 @@ if(!(ans2 == "" || ans2.length == 0 || ans2 == null))
     if (ans2 == pSet[3])
     {
         right = true;
-        if(boost != 3)
+        if(boost != 2)
         {
             boost += boostModifier;
         }
@@ -193,7 +193,7 @@ function checker3()
         if(ans3 == pSet[5])
         {
             right = true;
-            if(boost != 3)
+            if(boost != 2)
             {
                 boost += boostModifier;
             }
