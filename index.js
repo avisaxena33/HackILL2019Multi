@@ -1,3 +1,6 @@
+var express = require('express'),
+    app = express();
+
 let server = app.listen(process.env.PORT)
 var io = require('socket.io').listen(server)
 global.io = io
