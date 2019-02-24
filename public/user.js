@@ -144,9 +144,9 @@ function checker()
             point = point - Math.ceil(easy);
             health = health - easy;
         }
-        document.getElementById("card1").style.background = "white";
-        document.getElementById("card2").style.background = "white";
-        document.getElementById("card3").style.background = "white";
+        document.getElementById("card1").style.background = "#0389ff";
+        document.getElementById("card2").style.background = "#0389ff";
+        document.getElementById("card3").style.background = "#0389ff";
     }
 
 
@@ -188,9 +188,9 @@ if(!(ans2 == "" || ans2.length == 0 || ans2 == null))
         point = point - Math.ceil(medium/2);
         health = health - medium;
     }
-    document.getElementById("card1").style.background = "white";
-    document.getElementById("card2").style.background = "white";
-    document.getElementById("card3").style.background = "white";
+    document.getElementById("card1").style.background = "#0389ff";
+    document.getElementById("card2").style.background = "#0389ff";
+    document.getElementById("card3").style.background = "#0389ff";
 }
 if (right == true)
 {
@@ -230,9 +230,9 @@ function checker3()
             point = point - Math.ceil(hard/2);
             health = health - hard;
         }
-        document.getElementById("card1").style.background = "white";
-        document.getElementById("card2").style.background = "white";
-        document.getElementById("card3").style.background = "white";
+        document.getElementById("card1").style.background = "#0389ff";
+        document.getElementById("card2").style.background = "#0389ff";
+        document.getElementById("card3").style.background = "#0389ff";
     }
     if (right == true)
     {
@@ -273,7 +273,7 @@ function selectloot(thing){
     document.getElementById("item1").innerHTML = "Health Pack: " + c1;
   }else if(thing == 2){
     c2++;
-    document.getElementById("item2").innerHTML = "Enlarge Circle: " + c2;
+    document.getElementById("item2").innerHTML = "Reflect Wave: " + c2;
   }else if(thing == 3){
     c3++;
     document.getElementById("item3").innerHTML = "Booster: " + c3;
@@ -284,13 +284,13 @@ function selectloot(thing){
 }
 function setloot(question){
   if(question == 1){
-    document.getElementById("card1").style.background = "purple";
+    document.getElementById("card1").style.background = "#0389ff";
     giveloot = 1;
   }else if(question == 2){
-    document.getElementById("card2").style.background = "purple";
+    document.getElementById("card2").style.background = "#0389ff";
     giveloot = 2;
   }else if(question == 3){
-    document.getElementById("card3").style.background = "purple";
+    document.getElementById("card3").style.background = "#0389ff";
     giveloot = 3;
   }
 }
@@ -329,12 +329,12 @@ function updateUser() {
   $('#healthbar1').width(health +"%");
   $('#healthbar1').html(health +" \\ 100 HP");
   $('#points').width(point + "%");
-  $('#points').html("Points: " + point + "");
+  $('#points').html("Distance: " + point + "");
 }
 
 function updateTime() {
   $('#timer').width(count+"%");
-  $('#timer').html("Zone: " + Math.ceil(count + 1) +"");
+  $('#timer').html("Wave: " + Math.ceil(count + 1) +"");
 }
 
 function updateCount() {
@@ -344,20 +344,20 @@ function updateCount() {
 }
 function zoneTimer() {
   if(count < 0){
-    document.getElementById('zone').innerHTML = "Circle is closing: " + (Math.floor(z));
+    document.getElementById('zone').innerHTML = "The waves are coming: " + (Math.floor(z));
   }else{
     if(!rest){
       var t = (Math.ceil(zone_freq - y - 0.5));
       if(t <= 0){
         t = 0;
       }
-      document.getElementById('zone').innerHTML = "Circle is closing: " + (t - 1);
+      document.getElementById('zone').innerHTML = "The wavess are moving: " + (t - 1);
     }else if(rest){
       var t = (zone_timer - (Math.ceil(y)));
       if(t <= 0){
         t = 0;
       }
-      document.getElementById('zone').innerHTML = "Circle is going to close in: " + t;
+      document.getElementById('zone').innerHTML = "The tide is setting in: " + t;
     }
   }
 }
@@ -428,7 +428,7 @@ document.addEventListener("DOMContentLoaded", function()
     i3 = document.getElementById("item3");
     i4 = document.getElementById("item4");
     document.getElementById("item1").innerHTML = "Health Pack: " + c1;
-    document.getElementById("item2").innerHTML = "Enlarge Circle: " + c2;
+    document.getElementById("item2").innerHTML = "Reflect Wave: " + c2;
     document.getElementById("item3").innerHTML = "Booster: " + c3;
     document.getElementById("item4").innerHTML = "Scramble: " + c4;
     i1.addEventListener("click", function(e)
@@ -449,7 +449,7 @@ document.addEventListener("DOMContentLoaded", function()
         console.log("name: " + namebar + " enlarged circle");
         e.preventDefault();
         c2--;
-        document.getElementById("item2").innerHTML = "Enlarge Circle: " + c2;
+        document.getElementById("item2").innerHTML = "Reflect Wave: " + c2;
       }
 
     });

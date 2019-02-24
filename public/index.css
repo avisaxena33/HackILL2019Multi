@@ -8,10 +8,10 @@ input[type="answer"] {
 }
 
 body {
-	background-image: url("https://cdn.dribbble.com/users/388048/screenshots/2895908/whale-2.gif");
-   background-size:cover;
-   background-position: left 10% bottom 80%;
+	 background-color: #075C5F;
+   background-repeat: no-repeat;
 }
+
 
 #hackillinois {
 	position: absolute;
@@ -34,7 +34,7 @@ body {
 #outercont2 {
   position: absolute;
 	left:50%;
-	top:80%;
+	top:65%;
 	transform: translateX(-50%)
 	translateY(-50%);
 	color:white;
