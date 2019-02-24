@@ -30,7 +30,10 @@ var boost = 1;
 var boostModifier = .25;
 var connections;
 //countdown();
-
+$('#healthbar1').width(0 +"%");
+$('#healthbar1').html(0 +" \\ 100 HP");
+$('#points').width(0 + "%");
+$('#points').html("Points: " + 0 + "");
 document.addEventListener("DOMContentLoaded", function()
 {
     nametag = document.getElementById("namebar");
