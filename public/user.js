@@ -20,9 +20,9 @@ var point = 0;   //points accumulated by player starts at 0
 var hard = 8;     //hard problem value
 var medium = 5;    //medium problem value
 var easy = 3;      //easy problem value
-var speed = 0.1;   //base speed, 0.1 increase per tenth of a second
-var speed_multiplier = 1.5; //speed increase multiplier
-var damage_multiplier = 1.5; //damage modifier
+var speed = 0.3;   //base speed, 0.1 increase per tenth of a second
+var speed_multiplier = 2; //speed increase multiplier
+var damage_multiplier = 2; //damage modifier
 var damage_tick = 1;       //base damage at beginning of the game
 var zone_freq = 20;        //speed up / damage increase frequency in seconds and runtime
 var zone = 1;              // zone number
@@ -347,7 +347,7 @@ function countdown() {
 function calculateAI() {
   var delta = point - count;
   var totalplayers = 100 - count;
-  var behind = Math.max((0.01*delta + 0.5)*totalplayers,0);
+  var behind = Math.max((0.01*delta + 0.5)*totalplayers,totalplayers);
   var ahead = Math.max(totalplayers - behind, 0);
   $('#pbehind').html("Players Behind: " + Math.floor(behind));
   $('#pahead').html("Players Ahead: " + Math.floor(ahead));
