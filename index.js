@@ -1,7 +1,3 @@
-const server = express()
-  .use((req, res) => res.sendFile(INDEX))
-  .listen(PORT, () => console.loq(`Listening on ${ PORT }`));
-
 let server = app.listen(process.env.PORT)
 var io = require('socket.io').listen(server)
 global.io = io
