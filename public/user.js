@@ -89,7 +89,6 @@ socket.on("newProblems", function(data)
     ans1 = document.getElementById("answer1").value = "";
     ans2 = document.getElementById("answer2").value = "";
     ans3 = document.getElementById("answer3").value = "";
-
 });
 
 socket.on("startGameAll", function(data)

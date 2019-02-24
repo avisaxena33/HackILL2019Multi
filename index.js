@@ -1,10 +1,5 @@
-var express = require('express'),
-    app = express();
-
-let server = app.listen(process.env.PORT)
-var io = require('socket.io').listen(server)
-global.io = io
-
+var express = require('express');
+var socket = require('socket.io');
 
 var easyNumSet = [];
 var medNumSet = [];
@@ -37,15 +32,22 @@ var answer2;
 var answer3;
 
 var pSet = [];
+//App Setup
+var app = express();
 
 var playerName;
 var newCounter = false;
 
+var server = app.listen(process.env.PORT, function(){
+  console.log('listening on :3000');
+});
+
+var io = socket(server);
 
 app.use(express.static("public"));
 var connections = 0;
 
-io.sockets.on("connection", function(socket)
+io.on("connection", function(socket)
 {
     console.log("Made Socket Connection", socket.id);
     if (newCounter == true)
@@ -55,7 +57,7 @@ io.sockets.on("connection", function(socket)
         player = {};
         player.name = tempName;
         player.id = socket.id;
-        genProblem();
+        genProblem(io, socket);
         player.problems = pSet;
         playerList.push(player);
         io.to(socket.id).emit("firstSet", player);
@@ -64,18 +66,15 @@ io.sockets.on("connection", function(socket)
 
     socket.on("newPlayer", function(data)
     {
-        tempName = data;
-        newCounter = true;
+        tempName = data
+        newCounter = true
+        io.to(socket.id).emit("userLogin");
     });
 
     socket.on("newProb", function()
     {
-        genProblem();
-        setTimeout(bigGay, 1000);
-        function bigGay()
-        {
-            io.to(socket.id).emit("newProblems", pSet);
-        }
+        console.log(socket.id);
+        genProblem(io, socket);
     });
 
     socket.on("startGameAll", function()
@@ -106,7 +105,7 @@ io.sockets.on("connection", function(socket)
 
 });
 
-function genProblem()
+function genProblem(io, socket)
 {
     pSet = [];
     var op1 =  easyNumSet[Math.floor(Math.random()*(18-0+1)+0)];
@@ -215,4 +214,5 @@ function genProblem()
 
     pSet.push(problem1, answer1, problem2, answer2, problem3, answer3);
     console.log(pSet);
+    io.to(socket.id).emit("newProblems", pSet);
 }

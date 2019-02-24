@@ -1,4 +1,4 @@
-var socket = io();
+var socket = io()
 console.log("js file loaded");
 var name;
 
@@ -15,13 +15,14 @@ document.addEventListener("DOMContentLoaded", function()
 
 
 });
+
 function enterName()
 {
     console.log("entered entername func");
     socket.emit("newPlayer", name);
-    setTimeout(broo, 2000);
-    function broo()
-    {
-        document.location.href = "game.html";
-    }
 }
+
+socket.on("userLogin", function()
+{
+    document.location.href = "game.html";
+});
