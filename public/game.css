@@ -5,17 +5,17 @@
   z-index: 1000;
 }
 #item1{position:absolute;
-	left:28%;
+	left:20%;
 transform: translateX(-50%)}
 
 #item2{position:absolute;
-	left:42%;
+	left:40%;
 transform: translateX(-50%)}
 
 #item3{position:absolute;
-	left:56%;
+	left:60%;
 transform: translateX(-50%)}
 
 #item4{position:absolute;
-	left:70%;
+	left:80%;
 transform: translateX(-50%)}

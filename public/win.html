@@ -1,8 +1,8 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
 	<script src="win.js"></script>
-<title> Educational Battle Royale</title>
+<title>Math Jam</title>
 <style>
 	*{margin:0;
 	 padding:1000;}
@@ -11,23 +11,55 @@ h1{position: absolute;
 		 top:50%;
 		 transform: translateX(-50%)
 		 translateY(-50%);
-		 text-align: center;}
+		 text-align: center;
+		 color:	green;
+		 font-size:96px;
+		 text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	     }
 button{position: absolute;
 	     left:50%;
-		 top:60%;
+		 top:70%;
 		 transform: translateX(-50%)
 		 translateY(-50%);
-		 text-align: center;}
-body {background-color:green;}
+		 text-align: center;
+	     font-size:24px;
+		 padding:14x 40x;
+		 border-radius:12px;
+	     background-color:#00334d;
+	     color:	white;
+	     border:solid #00334d;
+}
+body {background-image: url("https://cdn5.f-cdn.com/contestentries/190907/65270/5521413f78d82_thumb900.jpg");
+		    background-size: cover;}
+#hackillinois {
+	position: absolute;
+  top: 0px;
+  right: 0px;
+  height:170px;
+  width:170px;
+  border-radius:50%;
+	z-index: 9000px;
+}
+
 </style>
 </head>
 <body>
-<h1> You Win! </h1>
-<button id="laggy"> Play Again </button>
-</body>
+<link href="firework.css" rel="stylesheet">
+<div class="pyro">
+  <div class="before"></div>
+		<a href="https://hackillinois.org/"> <img src="https://pbs.twimg.com/profile_images/1099027024277053443/NO1m-bzd_400x400.png" id="hackillinois"> </a>
+		<h1> You Win! </h1>
+		<button id="laggy"> Play Again </button>
+		<div class="pyro">
+		  <div class="before"></div>
+		  <div class="after"></div>
+		</div>
+  <div class="after"></div>
+</div>
 
 
 
 
 
-</html>
+
+</body></html>
