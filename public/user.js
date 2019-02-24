@@ -46,18 +46,21 @@ document.addEventListener("DOMContentLoaded", function()
     {
         checker();
         e.preventDefault();
+        sub1.disabled = true;
     });
 
     sub2.addEventListener("click", function(e)
     {
         checker2();
         e.preventDefault();
+        sub2.disabled = true;
     });
 
     sub3.addEventListener("click", function(e)
     {
         checker3();
         e.preventDefault();
+        sub3.disabled = true;
     });
 
     starter.addEventListener("click", function(e)
@@ -89,6 +92,9 @@ socket.on("newProblems", function(data)
     ans1 = document.getElementById("answer1").value = "";
     ans2 = document.getElementById("answer2").value = "";
     ans3 = document.getElementById("answer3").value = "";
+    sub1.disabled = false;
+    sub2.disabled = false;
+    sub3.disabled = false;
 });
 
 socket.on("startGameAll", function(data)
