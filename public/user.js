@@ -118,6 +118,9 @@ function checker()
         if (ans1 == pSet[1])
         {
             right = true;
+            if(giveloot == 1){
+            selectloot(Math.floor(Math.random()*4))
+            }
             if(boost != 2)
             {
                 boost += boostModifier;
@@ -131,8 +134,10 @@ function checker()
             boost = 1;
             point = point - Math.ceil(easy);
             health = health - easy;
-
         }
+        document.getElementById("card1").style.background = "white";
+        document.getElementById("card2").style.background = "white";
+        document.getElementById("card3").style.background = "white";
     }
 
 
@@ -157,6 +162,9 @@ if(!(ans2 == "" || ans2.length == 0 || ans2 == null))
     if (ans2 == pSet[3])
     {
         right = true;
+        if(giveloot == 2){
+          selectloot(Math.floor(Math.random()*4))
+        }
         if(boost != 2)
         {
             boost += boostModifier;
@@ -171,6 +179,9 @@ if(!(ans2 == "" || ans2.length == 0 || ans2 == null))
         point = point - Math.ceil(medium/2);
         health = health - medium;
     }
+    document.getElementById("card1").style.background = "white";
+    document.getElementById("card2").style.background = "white";
+    document.getElementById("card3").style.background = "white";
 }
 if (right == true)
 {
@@ -193,6 +204,9 @@ function checker3()
         if(ans3 == pSet[5])
         {
             right = true;
+            if(giveloot == 3){
+              selectloot(Math.floor(Math.random()*4))
+            }
             if(boost != 2)
             {
                 boost += boostModifier;
@@ -207,6 +221,9 @@ function checker3()
             point = point - Math.ceil(hard/2);
             health = health - hard;
         }
+        document.getElementById("card1").style.background = "white";
+        document.getElementById("card2").style.background = "white";
+        document.getElementById("card3").style.background = "white";
     }
     if (right == true)
     {
@@ -224,12 +241,49 @@ function checker3()
 
 function newProblems()
 {
-    console.log(boost);
-    socket.emit("newProb", socket.id);
+  var lootchooser = Math.floor(Math.random() * 50);
+  if(lootchooser == 5){
+    setloot(1);
+  }else if(lootchooser > 10 && lootchooser < 17){
+    setloot(2);
+  }else if(lootchooser > 37){
+    setloot(3);
+  }
+  console.log(lootchooser);
+  socket.emit("newProb");
 }
 
 function updateName(newname) {
   document.getElementById('namebar').innerHTML = "Hello " + newname;
+}
+
+var giveloot = 0;
+function selectloot(thing){
+  if(thing == 1){
+    c1++;
+    document.getElementById("item1").innerHTML = "Health Pack: " + c1;
+  }else if(thing == 2){
+    c2++;
+    document.getElementById("item2").innerHTML = "Enlarge Circle: " + c2;
+  }else if(thing == 3){
+    c3++;
+    document.getElementById("item3").innerHTML = "Booster: " + c3;
+  }else{
+    c4++;
+    document.getElementById("item4").innerHTML = "Scramble: " + c4;
+  }
+}
+function setloot(question){
+  if(question == 1){
+    document.getElementById("card1").style.background = "purple";
+    giveloot = 1;
+  }else if(question == 2){
+    document.getElementById("card2").style.background = "purple";
+    giveloot = 2;
+  }else if(question == 3){
+    document.getElementById("card3").style.background = "purple";
+    giveloot = 3;
+  }
 }
 
 
@@ -352,3 +406,60 @@ function calculateAI() {
   $('#pbehind').html("Players Behind: " + Math.floor(behind));
   $('#pahead').html("Players Ahead: " + Math.floor(ahead));
 }
+
+
+var c1 = 1;
+var c2 = 1;
+var c3 = 1;
+var c4 = 1;
+document.addEventListener("DOMContentLoaded", function()
+{
+    i1 = document.getElementById("item1");
+    i2 = document.getElementById("item2");
+    i3 = document.getElementById("item3");
+    i4 = document.getElementById("item4");
+    document.getElementById("item1").innerHTML = "Health Pack: " + c1;
+    document.getElementById("item2").innerHTML = "Enlarge Circle: " + c2;
+    document.getElementById("item3").innerHTML = "Booster: " + c3;
+    document.getElementById("item4").innerHTML = "Scramble: " + c4;
+    i1.addEventListener("click", function(e)
+    {
+      if(c1 > 0){
+        sethealth(health + 50);
+        e.preventDefault();
+        c1--;
+        document.getElementById("item1").innerHTML = "Health Pack: " + c1;
+      }
+    });
+
+    i2.addEventListener("click", function(e)
+    {
+      if(c2 > 0){
+        count = count - 30;
+        e.preventDefault();
+        c2--;
+        document.getElementById("item2").innerHTML = "Enlarge Circle: " + c2;
+      }
+
+    });
+
+    i3.addEventListener("click", function(e)
+    {
+      if(c3 > 0){
+        boost = 2;
+        e.preventDefault();
+        c3--;
+        document.getElementById("item3").innerHTML = "Booster: " + c3;
+      }
+    });
+
+    i4.addEventListener("click", function(e)
+    {
+      if(c4 > 0){
+        newProblems();
+        e.preventDefault();
+        c4--;
+        document.getElementById("item4").innerHTML = "Scramble: " + c4;
+      }
+    });
+});
