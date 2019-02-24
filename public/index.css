@@ -1,0 +1,57 @@
+#name {
+  display: inline-block;
+  text-align: center;
+}
+
+input[type="answer"] {
+    width: 200px;
+}
+
+body {
+	background-image: url("https://cdn.dribbble.com/users/388048/screenshots/2895908/whale-2.gif");
+   background-size:cover;
+   background-position: left 10% bottom 80%;
+}
+
+#hackillinois {
+	position: absolute;
+  top: 0px;
+  right: 0px;
+  height:170px;
+  width:170px;
+  border-radius:50%;
+}
+
+#outercont {
+  position: absolute;
+	left:50%;
+	top:50%;
+	transform: translateX(-50%)
+	translateY(-50%);
+	text-align: center;
+}
+
+#outercont2 {
+  position: absolute;
+	left:50%;
+	top:80%;
+	transform: translateX(-50%)
+	translateY(-50%);
+	color:white;
+	padding:0px;
+	border-radius:0px;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+#headertitle {
+  position: absolute;
+	left:50%;
+	top:30%;
+	transform: translateX(-50%)
+	translateY(-50%);
+  font-size: 96px;
+  color:white;
+  padding:0px;
+  border-radius:0px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}

@@ -1,0 +1,21 @@
+.navbar-giveFat{
+  height: 10%;
+}
+.mfront {
+  z-index: 1000;
+}
+#item1{position:absolute;
+	left:20%;
+transform: translateX(-50%)}
+
+#item2{position:absolute;
+	left:40%;
+transform: translateX(-50%)}
+
+#item3{position:absolute;
+	left:60%;
+transform: translateX(-50%)}
+
+#item4{position:absolute;
+	left:80%;
+transform: translateX(-50%)}

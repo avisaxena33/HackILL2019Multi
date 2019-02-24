@@ -1,0 +1,26 @@
+{
+  "name": "hackill2019",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/avisaxena33/HackILL2019.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/avisaxena33/HackILL2019/issues"
+  },
+  "homepage": "https://github.com/avisaxena33/HackILL2019#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "socket.io": "^2.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  },
+  "description": ""
+}
