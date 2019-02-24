@@ -144,9 +144,9 @@ function genProblem(io, socket)
     if (oper == "X")
     {
         answer2 = parseInt(op1) * parseInt(op2);
-        if (Math.abs(op2) == 0)
+        if (Math.abs(answer2) == 0)
         {
-            op2 = op2*-1;
+            answer2 = 0;
         }
     }
 
