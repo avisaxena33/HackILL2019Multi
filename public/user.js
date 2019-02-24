@@ -140,9 +140,9 @@ function checker()
             point = point - Math.ceil(easy);
             health = health - easy;
         }
-        document.getElementById("card1").style.background = "#0389ff";
-        document.getElementById("card2").style.background = "#0389ff";
-        document.getElementById("card3").style.background = "#0389ff";
+        document.getElementById("card1").style.background = "#7FACE8";
+        document.getElementById("card2").style.background = "#7FACE8";
+        document.getElementById("card3").style.background = "#7FACE8";
     }
 
 
@@ -184,9 +184,9 @@ if(!(ans2 == "" || ans2.length == 0 || ans2 == null))
         point = point - Math.ceil(medium/2);
         health = health - medium;
     }
-    document.getElementById("card1").style.background = "#0389ff";
-    document.getElementById("card2").style.background = "#0389ff";
-    document.getElementById("card3").style.background = "#0389ff";
+    document.getElementById("card1").style.background = "#7FACE8";
+    document.getElementById("card2").style.background = "#7FACE8";
+    document.getElementById("card3").style.background = "#7FACE8";
 }
 if (right == true)
 {
@@ -226,9 +226,9 @@ function checker3()
             point = point - Math.ceil(hard/2);
             health = health - hard;
         }
-        document.getElementById("card1").style.background = "#0389ff";
-        document.getElementById("card2").style.background = "#0389ff";
-        document.getElementById("card3").style.background = "#0389ff";
+        document.getElementById("card1").style.background = "#7FACE8";
+        document.getElementById("card2").style.background = "#7FACE8";
+        document.getElementById("card3").style.background = "#7FACE8";
     }
     if (right == true)
     {
