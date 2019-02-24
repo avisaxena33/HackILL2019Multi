@@ -78,7 +78,7 @@ socket.on("firstSet", function(data)
     ques1.innerHTML = pSet[0];
     ques2.innerHTML = pSet[2];
     ques3.innerHTML = pSet[4];
-*/});
+});*/
 
 socket.on("newProblems", function(data)
 {
