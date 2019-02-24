@@ -169,7 +169,10 @@ function genProblem(io, socket)
             var op2 =  medNumSet[Math.floor(Math.random()*(18-0+1)+0)];
             answer2 = parseInt(op1) / parseInt(op2);
         }
-
+        if (Math.abs(answer2) == 0)
+        {
+            answer2 = 0;
+        }
 
     }
     if (parseInt(op1) < 0)
