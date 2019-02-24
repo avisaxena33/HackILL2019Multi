@@ -12,9 +12,6 @@ To install express.js, change directory to the HackILL2019Multi folder and run t
 To install socket.io, change directory to the HackILL2019Multi folder and run the code "npm install socket.io --save".  
 ## Rules
 Players begin the game with 100 health points. Once the health points reach 0, the player is eliminated from the game. Players lose health points when they are in the zone. To stay alive, they must solve math questions to accumulate points and stay ahead of the zone. However, the zone expands and damages quicker and harder as time elapses. There will be easy, medium, and hard math questions with each difficulty awarding an increasing sequence of points. The last player standing wins.
-=======
-## Rules
-Players begin the game with 100 health points. Once the health points reach 0, the player is eliminated from the game. Players lose health points when they are in the zone. To stay alive, they must solve math questions to accumulate points and stay ahead of the zone. However, the zone expands and damages quicker and harder as time elapses. There will be easy, medium, and hard math questions with each difficulty awarding an increasing sequence of points. The last player standing wins.
 ## Built With
 - HTML
 - CSS
