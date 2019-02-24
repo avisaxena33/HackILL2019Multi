@@ -1,0 +1,54 @@
+#name {
+  display: inline-block;
+  text-align: center;
+}
+
+input[type="answer"] {
+    width: 200px;
+}
+
+body {
+	background-image: url("http://smartbook.club/wp-content/uploads//2018/09/simple-maths-thankful-for-this-simple-math-simple-maths-tricks-to-impress-friends.jpg");
+   background-size: cover;}
+
+#hackillinois {
+	position: absolute;
+  top: 0px;
+  right: 0px;
+  height:170px;
+  width:170px;
+}
+
+#outercont {
+  position: absolute;
+	left:50%;
+	top:50%;
+	transform: translateX(-50%)
+	translateY(-50%);
+	text-align: center;
+}
+
+#outercont2 {
+  position: absolute;
+	left:50%;
+	top:75%;
+	transform: translateX(-50%)
+	translateY(-50%);
+	color:white;
+	background:rgba(0,0,0,.5);
+	padding:0px;
+	border-radius:0px;
+}
+
+#headertitle {
+  position: absolute;
+	left:50%;
+	top:40%;
+	transform: translateX(-50%)
+	translateY(-50%);
+  font-size: 200%;
+  color:white;
+  background:rgba(0,0,0,.5);
+  padding:0px;
+  border-radius:0px;
+}
