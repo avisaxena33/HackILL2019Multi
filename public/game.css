@@ -1,6 +1,16 @@
 .navbar-giveFat{
   height: 10%;
 }
+html{
+  height: 100%;
+}
+body {
+  height: 100%;
+  background-color: #075C5F;
+  background-image: linear-gradient(to bottom, teal,#40E0D0,#075C5F);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
 .mfront {
   z-index: 1000;
 }
