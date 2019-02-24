@@ -131,7 +131,7 @@ function genProblem(io, socket)
         op2 = "(" + op2 + ")";
     }
 
-    problem1 = op1 + oper + op2;
+    problem1 = op1 + " " oper + " " op2;
 
 
 
@@ -185,7 +185,7 @@ function genProblem(io, socket)
         op2 = "(" + op2 + ")";
     }
 
-    problem2 = op1 + oper + op2;
+    problem2 = op1 + " " oper + " " op2;
 
 
     var op1 =  hardNumSet[Math.floor(Math.random()*(198-0+1)+0)];
@@ -217,7 +217,7 @@ function genProblem(io, socket)
         op2 = "(" + op2 + ")";
     }
 
-    problem3 = op1 + oper + op2;
+    problem3 = op1 + " " oper + " " op2;
 
 
     pSet.push(problem1, answer1, problem2, answer2, problem3, answer3);
