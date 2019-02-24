@@ -138,15 +138,16 @@ function genProblem(io, socket)
 
     var op1 =  medNumSet[Math.floor(Math.random()*(18-0+1)+0)];
     var op2 =  medNumSet[Math.floor(Math.random()*(18-0+1)+0)];
-    if (Math.abs(op2) == 0)
-    {
-        op2 = Math.abs(op2);
-    }
+
     var oper = medOpSet[Math.floor(Math.random()*(3-0+1)+0)];
 
     if (oper == "X")
     {
         answer2 = parseInt(op1) * parseInt(op2);
+        if (Math.abs(op2) == 0)
+        {
+            op2 = op2*-1;
+        }
     }
 
     else if (oper == "+")
