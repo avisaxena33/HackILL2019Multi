@@ -7,15 +7,9 @@ To begin contributing, you must install 2 frameworks and a library. Follow the i
 2. express.js
 3. socket.io
 ### Installing
-<<<<<<< HEAD
-To install node.js, visit the website 'https://nodejs.org/en/' and click the download button.
-To install express.js, change directory to the HackILL2019 folder and run the code "npm install express --save".
-To install socket.io, change directory to the HackILL2019 folder and run the code "npm install socket.io --save".
-=======
 To install node.js, visit the website 'https://nodejs.org/en/' and click the download button.  
 To install express.js, change directory to the HackILL2019Multi folder and run the code "npm install express --save".  
 To install socket.io, change directory to the HackILL2019Multi folder and run the code "npm install socket.io --save".  
->>>>>>> refs/remotes/origin/master
 ## Rules
 Players begin the game with 100 health points. Once the health points reach 0, the player is eliminated from the game. Players lose health points when they are in the zone. To stay alive, they must solve math questions to accumulate points and stay ahead of the zone. However, the zone expands and damages quicker and harder as time elapses. There will be easy, medium, and hard math questions with each difficulty awarding an increasing sequence of points. The last player standing wins.
 ## Built With
@@ -23,7 +17,7 @@ Players begin the game with 100 health points. Once the health points reach 0, t
 - CSS
 - JavaScript
 ## Credits
-Michael Kwan
+Michael Kwan 
 
 Michael Zhou
 
