@@ -8,11 +8,19 @@ input[type="answer"] {
 }
 
 body {
+<<<<<<< HEAD
 	 background-color: #075C5F;
    background-repeat: no-repeat;
 }
 
 
+=======
+	background-image: url("https://cdn.dribbble.com/users/388048/screenshots/2895908/whale-2.gif");
+   background-size:cover;
+   background-position: left 10% bottom 80%;
+}
+
+>>>>>>> refs/remotes/origin/master
 #hackillinois {
 	position: absolute;
   top: 0px;
@@ -34,7 +42,11 @@ body {
 #outercont2 {
   position: absolute;
 	left:50%;
+<<<<<<< HEAD
 	top:65%;
+=======
+	top:80%;
+>>>>>>> refs/remotes/origin/master
 	transform: translateX(-50%)
 	translateY(-50%);
 	color:white;

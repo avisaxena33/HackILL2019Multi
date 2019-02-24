@@ -18,7 +18,10 @@ document.addEventListener("DOMContentLoaded", function()
 
 function enterName()
 {
+<<<<<<< HEAD
     console.log("entered entername func");
+=======
+>>>>>>> refs/remotes/origin/master
     socket.emit("newPlayer", name);
 }
 
