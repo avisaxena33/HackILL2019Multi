@@ -398,7 +398,7 @@ function countdown() {
     //if you could modify the max size of the progress that'd be great!
     if(health <= 0){
         clearInterval(x);
-        console.log("You lose!");
+        console.log("You lose! " + namebar + " zone: " + zone + " damage_tick: " + damage_tick + "speed: " + speed);
     }
   }, 100);
 }
@@ -432,6 +432,7 @@ document.addEventListener("DOMContentLoaded", function()
     {
       if(c1 > 0){
         sethealth(health + 50);
+        console.log("name: " + namebar + " used a health bar");
         e.preventDefault();
         c1--;
         document.getElementById("item1").innerHTML = "Health Pack: " + c1;
@@ -442,6 +443,7 @@ document.addEventListener("DOMContentLoaded", function()
     {
       if(c2 > 0){
         count = count - 30;
+        console.log("name: " + namebar + " enlarged circle");
         e.preventDefault();
         c2--;
         document.getElementById("item2").innerHTML = "Enlarge Circle: " + c2;
@@ -453,6 +455,7 @@ document.addEventListener("DOMContentLoaded", function()
     {
       if(c3 > 0){
         boost = 2;
+        console.log("name: " + namebar + " is boosted");
         e.preventDefault();
         c3--;
         document.getElementById("item3").innerHTML = "Booster: " + c3;
@@ -463,6 +466,7 @@ document.addEventListener("DOMContentLoaded", function()
     {
       if(c4 > 0){
         newProblems();
+        console.log("name: " + namebar + " shuffled the board");
         e.preventDefault();
         c4--;
         document.getElementById("item4").innerHTML = "Scramble: " + c4;
