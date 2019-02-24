@@ -1,5 +1,10 @@
-var express = require('express');
-var socket = require('socket.io');
+var express = require('express'),
+    app = express(),
+    server = require('http').createServer(app),
+    io = require('socket.io').listen(server),
+
+server.listen(process.env.PORT || 3000);
+
 
 var easyNumSet = [];
 var medNumSet = [];
@@ -32,17 +37,10 @@ var answer2;
 var answer3;
 
 var pSet = [];
-//App Setup
-var app = express();
 
 var playerName;
 var newCounter = false;
 
-var server = app.listen(process.env.PORT, function(){
-  console.log('listening on :3000');
-});
-
-var io = socket(server);
 
 app.use(express.static("public"));
 var connections = 0;
