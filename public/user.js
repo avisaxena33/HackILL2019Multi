@@ -431,7 +431,7 @@ document.addEventListener("DOMContentLoaded", function()
     i1.addEventListener("click", function(e)
     {
       if(c1 > 0){
-        sethealth(health + 50);
+        sethealth(health + 20);
         e.preventDefault();
         c1--;
         document.getElementById("item1").innerHTML = "Health Pack: " + c1;
@@ -441,7 +441,7 @@ document.addEventListener("DOMContentLoaded", function()
     i2.addEventListener("click", function(e)
     {
       if(c2 > 0){
-        count = count - 30;
+        count = count - 10;
         e.preventDefault();
         c2--;
         document.getElementById("item2").innerHTML = "Enlarge Circle: " + c2;
