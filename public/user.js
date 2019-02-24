@@ -431,7 +431,7 @@ document.addEventListener("DOMContentLoaded", function()
     i1.addEventListener("click", function(e)
     {
       if(c1 > 0){
-        sethealth(health + 50);
+        sethealth(health + 20);
         console.log("name: " + namebar + " used a health bar");
         e.preventDefault();
         c1--;
@@ -442,7 +442,7 @@ document.addEventListener("DOMContentLoaded", function()
     i2.addEventListener("click", function(e)
     {
       if(c2 > 0){
-        count = count - 30;
+        count = count - 10;
         console.log("name: " + namebar + " enlarged circle");
         e.preventDefault();
         c2--;
