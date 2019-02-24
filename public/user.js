@@ -72,13 +72,13 @@ socket.on("firstSet", function(data)
     nametag.innerHTML = "Hello " + data.name + "!";
 });
 
-socket.on("firstProblems", function(data)
+/*socket.on("firstProblems", function(data)
 {
     pSet = data.problems.slice();
     ques1.innerHTML = pSet[0];
     ques2.innerHTML = pSet[2];
     ques3.innerHTML = pSet[4];
-});
+*/});
 
 socket.on("newProblems", function(data)
 {

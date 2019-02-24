@@ -58,10 +58,10 @@ io.on("connection", function(socket)
         player.name = tempName;
         player.id = socket.id;
         genProblem(io, socket);
-        player.problems = pSet;
+        //player.problems = pSet;
         playerList.push(player);
         io.to(socket.id).emit("firstSet", player);
-        io.to(socket.id).emit("firstProblems", player);
+        //io.to(socket.id).emit("firstProblems", player);
     }
 
     socket.on("newPlayer", function(data)
@@ -158,7 +158,7 @@ function genProblem(io, socket)
     else
     {
         answer2 = parseInt(op1) / parseInt(op2);
-        while (answer2 != Math.ceil(answer2) && op2 != "0")
+        while (answer2 != Math.ceil(answer2) || op2 == "0")
         {
             var op1 =  medNumSet[Math.floor(Math.random()*(18-0+1)+0)];
             var op2 =  medNumSet[Math.floor(Math.random()*(18-0+1)+0)];
