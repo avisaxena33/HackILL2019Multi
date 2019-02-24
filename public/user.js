@@ -346,7 +346,7 @@ function countdown() {
 
 function calculateAI() {
   var delta = point - count;
-  var totalplayers = 100 - count;
+  var totalplayers = Math.min(100 - count, 100);
   var behind = Math.max((0.01*delta + 0.5)*totalplayers,totalplayers);
   var ahead = Math.max(totalplayers - behind, 0);
   $('#pbehind').html("Players Behind: " + Math.floor(behind));
