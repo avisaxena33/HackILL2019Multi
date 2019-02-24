@@ -2,8 +2,7 @@ var express = require('express'),
     app = express(),
     server = require('http').createServer(app),
     io = require('socket.io').listen(server),
-
-server.listen(process.env.PORT || 3000);
+    server.listen(process.env.PORT || 3000);
 
 
 var easyNumSet = [];
@@ -45,7 +44,7 @@ var newCounter = false;
 app.use(express.static("public"));
 var connections = 0;
 
-io.on("connection", function(socket)
+io.sockets.on("connection", function(socket)
 {
     console.log("Made Socket Connection", socket.id);
     if (newCounter == true)
