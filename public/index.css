@@ -8,8 +8,10 @@ input[type="answer"] {
 }
 
 body {
-	background-image: url("http://smartbook.club/wp-content/uploads//2018/09/simple-maths-thankful-for-this-simple-math-simple-maths-tricks-to-impress-friends.jpg");
-   background-size: cover;}
+	background-image: url("https://cdn.dribbble.com/users/388048/screenshots/2895908/whale-2.gif");
+   background-size:cover;
+   background-position: left 10% bottom 80%;
+}
 
 #hackillinois {
 	position: absolute;
@@ -17,6 +19,7 @@ body {
   right: 0px;
   height:170px;
   width:170px;
+  border-radius:50%;
 }
 
 #outercont {
@@ -31,24 +34,24 @@ body {
 #outercont2 {
   position: absolute;
 	left:50%;
-	top:75%;
+	top:80%;
 	transform: translateX(-50%)
 	translateY(-50%);
 	color:white;
-	background:rgba(0,0,0,.5);
 	padding:0px;
 	border-radius:0px;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 #headertitle {
   position: absolute;
 	left:50%;
-	top:40%;
+	top:30%;
 	transform: translateX(-50%)
 	translateY(-50%);
-  font-size: 200%;
+  font-size: 96px;
   color:white;
-  background:rgba(0,0,0,.5);
   padding:0px;
   border-radius:0px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
