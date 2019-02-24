@@ -94,7 +94,7 @@ io.on("connection", function(socket)
         })
 
         if (playerList.length == 1) {
-            console.log("we found winner");
+            console.log("Winner Found!");
             io.to(playerList[0].id).emit("winner");
         } else {
             socket.emit("lifeCount", connections);

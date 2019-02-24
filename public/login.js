@@ -18,7 +18,6 @@ document.addEventListener("DOMContentLoaded", function()
 
 function enterName()
 {
-    console.log("entered entername func");
     socket.emit("newPlayer", name);
 }
 

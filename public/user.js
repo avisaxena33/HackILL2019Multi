@@ -118,10 +118,6 @@ socket.on("winner", function() {
 function checker()
 {
     ans1 = parseInt(document.getElementById("answer1").value);
-
-
-
-
     if (!(ans1 == "" || ans1.length == 0 || ans1 == null))
     {
         if (ans1 == pSet[1])
